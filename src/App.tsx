@@ -12,7 +12,6 @@ interface Quote {
 const getRandomQuote = (quotesArray: Quote[]): Quote | null => {
 	// Generate a random index
 	const randomIndex = Math.floor(Math.random() * quotesArray.length);
-
 	// Return the quote at the random index or null if the array is empty
 	return quotesArray[randomIndex] || null;
 };
@@ -21,15 +20,15 @@ const getRandomQuote = (quotesArray: Quote[]): Quote | null => {
 function App() {
 	// Use state to keep track of the current quote
 	const [currentQuote] = useState<Quote | null>(getRandomQuote(allQuotesData));
-
 	// Destructure currentQuote or provide default values
 	const { text, author } = currentQuote || { text: 'No quote available', author: 'Unknown author' };
-
 	// Render the quote in a simple HTML structure
 	return (
-		<div>
-			<p>"{text}"</p>
-			<p>- {author}</p>
+		<div id="quote-box">
+			<div className="quote-content">
+				<h2 id="text">"{text}"</h2>
+				<h4 id="author">- {author}</h4>
+			</div>
 		</div>
 	);
 }
