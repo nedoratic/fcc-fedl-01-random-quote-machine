@@ -26,7 +26,9 @@ function App() {
 	return (
 		<div id="quote-box">
 			<div className="quote-content">
-				<h2 id="text">"{text}"</h2>
+				<h2 id="text">
+					<i className="fa-solid fa-quote-left"></i> {text} <i className="fa-solid fa-quote-right"></i>
+				</h2>
 				<h4 id="author">- {author}</h4>
 				<button>
 					<a className="twitter-share-button" id="tweet-quote" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${text}" - ${author}`)}`} target="_blank">
