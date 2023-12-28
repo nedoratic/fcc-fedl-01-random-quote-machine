@@ -19,9 +19,13 @@ const getRandomQuote = (quotesArray: Quote[]): Quote | null => {
 // Main component
 function App() {
 	// Use state to keep track of the current quote
-	const [currentQuote] = useState<Quote | null>(getRandomQuote(allQuotesData));
+	const [currentQuote, setCurrentQuote] = useState<Quote | null>(getRandomQuote(allQuotesData));
 	// Destructure currentQuote or provide default values
 	const { text, author } = currentQuote || { text: 'No quote available', author: 'Unknown author' };
+	// Function to get a new quote and update the state
+	const getNewQuote = () => {
+		setCurrentQuote(getRandomQuote(allQuotesData));
+	};
 	// Render the quote in a simple HTML structure
 	return (
 		<div id="quote-box">
@@ -35,7 +39,7 @@ function App() {
 						X
 					</a>
 				</button>
-				<button id="new-quote" href="">
+				<button id="new-quote" onClick={getNewQuote}>
 					New Quote
 				</button>
 			</div>
