@@ -28,6 +28,11 @@ function App() {
 			<div className="quote-content">
 				<h2 id="text">"{text}"</h2>
 				<h4 id="author">- {author}</h4>
+				<div className="buttons">
+					<a className="twitter-share-button" href={`https://twitter.com/intent/tweet?text=${encodeURIComponent(`"${text}" - ${author}`)}`}>
+						X
+					</a>
+				</div>
 			</div>
 		</div>
 	);
