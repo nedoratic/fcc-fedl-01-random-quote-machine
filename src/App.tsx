@@ -17,7 +17,7 @@ const getRandomQuote = (quotesArray: Quote[]): Quote | null => {
 };
 
 // Main component
-function App() {
+const App: React.FC = () => {
 	// Use state to keep track of the current quote
 	const [currentQuote, setCurrentQuote] = useState<Quote | null>(getRandomQuote(allQuotesData));
 	// Destructure currentQuote or provide default values
@@ -45,7 +45,7 @@ function App() {
 			</div>
 		</div>
 	);
-}
+};
 
 // Export the component as the default export of the file
 export default App;
