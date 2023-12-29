@@ -27,7 +27,7 @@
 
 #author {
 	margin: 10px 0 0;
-	font-size: 18px;
+	font-size: 1em;
 	color: #555555;
 	text-align: end;
 	padding: 0 0 1em 0;
@@ -41,6 +41,7 @@ button {
 	color: #f4f4f4;
 	margin: 2px;
 	text-align: end;
+	font-size: 1em;
 }
 
 button:hover,
@@ -52,4 +53,10 @@ button:focus {
 a {
 	text-decoration: none;
 	color: #f4f4f4;
+}
+
+@media (max-width: 768px) {
+	.quote-content {
+		max-width: 80%;
+	}
 }
