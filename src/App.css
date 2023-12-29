@@ -9,22 +9,47 @@
 
 .quote-content {
 	text-align: start;
-	padding: 20px;
+	padding: 3em;
 	border-radius: 8px;
 	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-	background-color: #fff;
+	background-color: #ffffff;
 	max-width: 600px;
+	min-width: 300;
 }
 
 #text {
 	margin: 0;
-	font-size: 24px;
-	color: #333;
+	font-size: 1.2em;
+	color: #333333;
+	padding: 0 0 1em 0;
+	text-align: justify;
 }
 
 #author {
 	margin: 10px 0 0;
 	font-size: 18px;
-	color: #555;
+	color: #555555;
 	text-align: end;
+	padding: 0 0 1em 0;
+}
+
+button {
+	border-radius: 8px;
+	border: none;
+	padding: 8px 16px;
+	background-color: #333333;
+	color: #f4f4f4;
+	margin: 2px;
+	text-align: end;
+}
+
+button:hover,
+button:focus {
+	cursor: pointer;
+	background-color: #555555;
+}
+
+a {
+	text-decoration: none;
+	color: #f4f4f4;
 }
